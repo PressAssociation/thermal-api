@@ -288,7 +288,7 @@ class Posts {
 				'posts_per_page' => \Voce\Thermal\v1\MAX_POSTS_PER_PAGE
 				) );
 			//get media in content
-			if ( preg_match_all( '|<img.*?class=[\'"](.*?)wp-image-([0-9]{1,6})(.*?)[\'"].*?>|i', $post->post_content, $matches ) ) {
+			if ( preg_match_all( '|<img.*?class=[\'"](.*?)wp-image-([0-9]{1,16})(.*?)[\'"].*?>|i', $post->post_content, $matches ) ) {
 				$media_image_ids = array_merge( $media_image_ids, $matches[2] );
 			}
 
